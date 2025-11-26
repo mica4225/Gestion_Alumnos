@@ -136,6 +136,6 @@ EMAIL_HOST = "smtp-relay.brevo.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "9c9dbc001@smtp-brevo.com" 
-EMAIL_HOST_PASSWORD = "xsmtpsib-213e80407adb916768038d71da2ec37e9eadabad15e20a3eb1c53b370aed841e-UjaRRyvu124FoUPQ"
+EMAIL_HOST_PASSWORD = ""
 DEFAULT_FROM_EMAIL = "maf.micaela@gmail.com"
 
