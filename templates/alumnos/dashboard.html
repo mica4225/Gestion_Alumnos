@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Mis alumnos</h2>
+<a class="btn btn-success mb-3" href="{% url 'alumnos:alumno_create' %}">Crear Alumno</a>
+<table class="table">
+  <thead><tr><th>Nombre</th><th>Curso</th><th>Correo</th><th>Acciones</th></tr></thead>
+  <tbody>
+    {% for a in alumnos %}
+      <tr>
+        <td>{{ a.nombre }}</td>
+        <td>{{ a.curso }}</td>
+        <td>{{ a.correo }}</td>
+        <td>
+          <a class="btn btn-sm btn-primary" href="{% url 'alumnos:alumno_detail' a.id %}">Ver</a>
+          <a class="btn btn-sm btn-outline-secondary" href="{% url 'alumnos:enviar_pdf_por_correo' a.id %}">Enviar PDF por correo</a>
+        </td>
+      </tr>
+    {% empty %}
+      <tr><td colspan="4">No hay alumnos</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

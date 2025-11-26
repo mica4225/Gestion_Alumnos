@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Alumno: {{ alumno.nombre }}</h2>
+<ul>
+  <li>Correo: {{ alumno.correo }}</li>
+  <li>Curso: {{ alumno.curso }}</li>
+  <li>Creado: {{ alumno.creado }}</li>
+</ul>
+<a href="{% url 'alumnos:enviar_pdf_por_correo' alumno.id %}" class="btn btn-outline-secondary">Enviar PDF por correo</a>
+{% endblock %}
